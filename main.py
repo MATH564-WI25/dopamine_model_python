@@ -89,15 +89,17 @@ def VTYRin(b):
     a = (k1*b/ (k2 + b))
     return a
 
-"""Modify this function to change firing bahavior"""
+"""
+    Modify this function to change firing bahavior
+    return 1 = not firing
+    return 500 = sustained firing during simulation
+"""
 def fire(t):
-    return 1 if t<0.1 else 0
+    return 500
 
 # ODEs
 def rhs(y,t):
-
     dy=np.zeros(10)
-
     btyr = 90
     NADP = 1*26
     NADPH = 330
@@ -130,6 +132,8 @@ def rhs(y,t):
     # y[9] = yrppool
     return dy
 
+
+# solve ode
 hours = 5
 tspan = np.linspace(0,hours,60*hours) # time span is 5 hours
 Y0 = np.array([0, 59.2406, 300.7594, 113.5721, 0.5312, 3.9684, 98.3679, 0.0025, 11.5097, 851.7909])
@@ -156,7 +160,7 @@ for i in range(6):
     ax=axs[i//3,i%3]
     ax.plot(tspan,sols[i],lw=2)
     ax.legend('Location','best')
-    ax.set_xlabel('minutes')
+    ax.set_xlabel('hours')
     ax.set_ylabel('\muM')
     ax.set_ylim([0.75*np.min(sols[i]),1.25*np.max(sols[i])])
     ax.set_title(labels[i])
