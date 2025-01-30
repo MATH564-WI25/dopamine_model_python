@@ -1,18 +1,18 @@
 ## Plots: Periodic enzyme velocity in dopamine pathway
 
-![](file:///C:/Users/damao/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![](./clip_image002.png)
 
 VDAT is periodic, VDAT=a * sin(2pi * t / Tau)+b, a=1, b=1, Tau=2, firing=500
 
-![](file:///C:/Users/damao/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
+![](./clip_image004.png)
 
 VDAT is periodic, Amplitude = 2, b=2, Tau =2, firing=500
 
-![](file:///C:/Users/damao/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![](./clip_image006.png)
 
 Both VTH and VDAT are periodic, both scaled with amplitude=2, b=2, Tau=2, firing=500
 
-![](file:///C:/Users/damao/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)
+![](./clip_image008.png)
 
 Tau=1 from last plot; need to turn up firing rate to 1000
 
